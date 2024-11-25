@@ -1,0 +1,12 @@
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="RSD">{TaxSubTotaltaxableAmount}</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="RSD">{TaxSubTotalAmount}</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>{TaxCategotyID}</cbc:ID>
+        <cbc:Percent>0</cbc:Percent>
+        <cbc:TaxExemptionReasonCode>{TaxExemptionReason}</cbc:TaxExemptionReasonCode>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>

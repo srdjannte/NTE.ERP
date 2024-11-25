@@ -1,0 +1,19 @@
+  <cac:InvoiceLine>
+    <cbc:ID>{LineID}</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="H87">{InvoiceQuantiy}</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="RSD">{PriceAmount}</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Name>{ItemName}</cbc:Name>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>{TaxCategotyID}</cbc:ID>
+        <cbc:Percent>{ClasifiedPercentTax}</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="RSD">{PriceAmount}</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="H87">{BaseQuantity}</cbc:BaseQuantity>
+    </cac:Price>
+  </cac:InvoiceLine>

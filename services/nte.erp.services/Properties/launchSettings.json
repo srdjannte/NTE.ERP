@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "nte.erp.services.invoices": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}

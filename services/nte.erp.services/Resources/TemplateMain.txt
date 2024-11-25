@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns:cec="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sbt="http://mfin.gov.rs/srbdt/srbdtext" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:mfin.gov.rs:srbdt:2022#conformant#urn:mfin.gov.rs:srbdtext:2022</cbc:CustomizationID>
+  <cbc:ProfileID>Moj-eRacun</cbc:ProfileID>
+  <cbc:ID>{InvoiceID}</cbc:ID>
+  <cbc:IssueDate>{NowDate}</cbc:IssueDate>
+  <cbc:IssueTime>{NowTime}</cbc:IssueTime>
+  <cbc:DueDate>{DueDate}</cbc:DueDate>
+  <cbc:InvoiceTypeCode>{InvoiceTypeCode}</cbc:InvoiceTypeCode>
+  <cbc:DocumentCurrencyCode>RSD</cbc:DocumentCurrencyCode>
+  <cac:InvoicePeriod>
+    <cbc:StartDate>{StartDate}</cbc:StartDate>
+    <cbc:EndDate>{Endate}</cbc:EndDate>
+    <cbc:DescriptionCode>{DescriptionCode}</cbc:DescriptionCode>
+  </cac:InvoicePeriod>
+  <cac:ContractDocumentReference>
+    <cbc:ID>{OrderReferenceID}</cbc:ID>
+  </cac:ContractDocumentReference>
+  <cac:AdditionalDocumentReference>
+    <cbc:ID>{DispetchDocumentReferenceID}</cbc:ID>
+    <cac:Attachment>
+      <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" encodingCode="base64" filename="{FilePath}">{FilePathBase64}</cbc:EmbeddedDocumentBinaryObject>
+    </cac:Attachment>
+  </cac:AdditionalDocumentReference>
+  <cac:AdditionalDocumentReference>
+    <cbc:ID>{AdditionalDocumentReferenceID}</cbc:ID>
+    <cac:Attachment>
+      <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf" encodingCode="base64" filename="{FilePath2}">{FilePath2Base64}</cbc:EmbeddedDocumentBinaryObject>
+    </cac:Attachment>
+  </cac:AdditionalDocumentReference>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="{PartyEndPiont}">{PartySchmeID}</cbc:EndpointID>
+      <cac:PartyIdentification>
+        <cbc:ID>{PartyidentificatioID}</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>{PartyName}</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:StreetName>{PostalAdressStreatAdress}</cbc:StreetName>
+        <cbc:CityName>{PostalAdressCityName}</cbc:CityName>
+        <cbc:PostalZone>{PostalAdressZone}</cbc:PostalZone>
+        <cac:AddressLine>
+          <cbc:Line>{PostalAdressLine}</cbc:Line>
+        </cac:AddressLine>
+        <cac:Country>
+          <cbc:IdentificationCode>{CoyntryIdentificationCode}</cbc:IdentificationCode>
+          <cbc:Name>Serbia</cbc:Name>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>{PartyTaxSchemeCompanyID}</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>{PartylegalEntityName}</cbc:RegistrationName>
+        <cbc:CompanyID>{PartylegalEntityCmpanyid}</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>Zorica Krstić</cbc:Name>
+        <cbc:Telephone>0112054800 </cbc:Telephone>
+        <cbc:ElectronicMail>ulaznefakture@protent.rs</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="9948">103376513</cbc:EndpointID>
+      <cac:PartyName>
+        <cbc:Name>Eko-Metal DOO</cbc:Name>
+      </cac:PartyName>
+      <cac:PostalAddress>
+        <cbc:StreetName>IRIŠKA 16</cbc:StreetName>
+        <cbc:CityName>Vrdnik</cbc:CityName>
+        <cbc:PostalZone>{PostalAdressZone}</cbc:PostalZone>
+        <cac:AddressLine>
+          <cbc:Line>IRIŠKA 16,22408 Vrdnik</cbc:Line>
+        </cac:AddressLine>
+        <cac:Country>
+          <cbc:IdentificationCode>RS</cbc:IdentificationCode>
+          <cbc:Name>Serbia</cbc:Name>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>RS103376513</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Eko-Metal DOO</cbc:RegistrationName>
+        <cbc:CompanyID>08814651</cbc:CompanyID>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Telephone>022/465-351</cbc:Telephone>
+        <cbc:ElectronicMail>office@ekometal.com</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:Delivery>
+    <cbc:ActualDeliveryDate>{Diliverydate}</cbc:ActualDeliveryDate>
+    <cac:DeliveryLocation>
+      <cac:Address>
+        <cbc:PostalZone>{DiliveryPostalZone}</cbc:PostalZone>
+      </cac:Address>
+    </cac:DeliveryLocation>
+  </cac:Delivery>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>{PaymentMeansCode}</cbc:PaymentMeansCode>
+    <cbc:PaymentID>{PaymentMeansID}</cbc:PaymentID>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>{PaymeeFinancialAccountID}</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="RSD">{TaxTotalAmount}</cbc:TaxAmount>
+    <cac:TaxSubtotal/>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="RSD">{LineExtencionalAmount}</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="RSD">{TaxExclusiveAmount}</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="RSD">{TaxInclusiveAmount}</cbc:TaxInclusiveAmount>
+    <cbc:AllowanceTotalAmount currencyID="RSD">{AlouenceTotalAmount}</cbc:AllowanceTotalAmount>
+    <cbc:ChargeTotalAmount currencyID="RSD">{CharrgeTotalAmount}</cbc:ChargeTotalAmount>
+    <cbc:PayableAmount currencyID="RSD">{PaybleAmount}</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine/>
+</Invoice>
