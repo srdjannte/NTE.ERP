@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{84A801EC-D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nte.erp.core", "core\nte.erp.core\nte.erp.core.csproj", "{8A6C86CC-59B1-4574-860F-1091F5C575C6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nte.erp.data", "database\nte.erp.data\nte.erp.data.csproj", "{7E03D8B1-4095-482A-8713-90C5CC192DAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nte.erp.data.mssql", "database\nte.erp.data\nte.erp.data.mssql.csproj", "{7E03D8B1-4095-482A-8713-90C5CC192DAB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nte.erp.viewer", "windows\nte.erp.viewer\nte.erp.viewer.csproj", "{0BAA28F9-4285-4AC6-B493-AAB7B4FAB61C}"
 EndProject

@@ -50,7 +50,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\core\nte.erp.core\nte.erp.core.csproj" />
-    <ProjectReference Include="..\..\database\nte.erp.data\nte.erp.data.csproj" />
+    <ProjectReference Include="..\..\database\nte.erp.data\nte.erp.data.mssql.csproj" />
   </ItemGroup>
 
   <ItemGroup>
