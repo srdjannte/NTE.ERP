@@ -1,12 +1,29 @@
 ﻿using nte.erp.core.Export;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Data.SqlClient;
+using System.Xml.Serialization;
 
 namespace nte.erp.core
 {
+  public enum SourceKind { Local, Cloud, OnPremise, MsSql, MySql, ODBC, File, WebService, Assembly };
+
+  [Serializable]
+  [XmlRoot("Source")]
+  [Table("Source")]
   public class SourceModule : IDisposable
   {
+    public string Name = string.Empty;
+    public SourceKind Kind = SourceKind.Local;
+    public string TestFileName = string.Empty;
+    public int Timeout = 15;
+    public string ConnectionStr = string.Empty;
+    public string ListQuery = string.Empty;
+    public string MainQuery = string.Empty;
+    public string TestID = string.Empty;
+
     public string ConnectionString = string.Empty;
+    [XmlIgnore]
     public DataSet DataSet = new DataSet();
     public SourceModule()
     {
@@ -116,6 +133,32 @@ namespace nte.erp.core
       }
 
       return (oErrorText == string.Empty);
+    }
+    public void Update(string iName, string iKind, string iTestFileName, string iTimeout, string iConnectionStr, string iListQuery, string iMainQuery)
+    {
+      this.Name = iName;
+      this.ConnectionStr = iConnectionStr;
+      this.TestFileName = iTestFileName;
+      this.ListQuery = iListQuery;
+      this.MainQuery = iMainQuery;
+      if (int.TryParse(iTimeout, out int oTimeout))
+      {
+        this.Timeout = oTimeout;
+      }
+      if (Enum.TryParse(iKind, out SourceKind fKind))
+      {
+        this.Kind = fKind;
+      }
+    }
+    public string AsXML()
+    {
+      XmlSerializer x = new XmlSerializer(this.GetType());
+
+      using (StringWriter textWriter = new StringWriter())
+      {
+        x.Serialize(textWriter, this);
+        return textWriter.ToString();
+      }
     }
     public void Dispose()
     {

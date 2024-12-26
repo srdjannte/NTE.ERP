@@ -1,5 +1,5 @@
-﻿using nte.erp.core.Export;
-using nte.erp.core;
+﻿using nte.erp.core;
+using nte.erp.core.Export;
 using nte.erp.services.invoices.Classes;
 using System.Diagnostics;
 using System.Runtime.Versioning;
@@ -346,37 +346,12 @@ namespace nte.erp.services.invoices
 
     private void button1_Click(object sender, EventArgs e)
     {
-      InvoiceDB.Data.Model.Invoice fInvoice = new InvoiceDB.Data.Model.Invoice();
-      fInvoice.InvoiceId = "100";// this.ManualID.Text;
-
-      fInvoice.OrderReferenceId = "1";
-
-      XmlSerializer x = new XmlSerializer(fInvoice.GetType());
-      string fFileXml = fInvoice.InvoiceId + ".xml";
-
-      using (FileStream fs = new FileStream(fFileXml, FileMode.Create))
-      {
-        x.Serialize(fs, fInvoice);
-      }
+      
     }
 
     private void button2_Click(object sender, EventArgs e)
     {
-      using (FileStream fs = new FileStream("100.xml", FileMode.Open))
-      {
-        XmlSerializer _xSer = new XmlSerializer(typeof(InvoiceDB.Data.Model.Invoice));
-
-        var fObj = _xSer.Deserialize(fs);
-
-        if ((fObj is not null) && (fObj is InvoiceDB.Data.Model.Invoice))
-        {
-          InvoiceDB.Data.Model.Invoice oItem = (fObj as InvoiceDB.Data.Model.Invoice);
-          if (oItem != null)
-          {
-
-          }
-        }
-      }
+      
     }
   }
 }

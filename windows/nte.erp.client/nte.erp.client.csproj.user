@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Codebook\Party\ControlList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Common\ControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Common\ControlConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Common\ControlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Common\ControlSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Common\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Common\FormLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormConfigDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Invoices\Export\ControlInvoiceExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Invoices\Import\ControlDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Invoices\Import\ControlList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Invoices\Import\FormDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Invoices\Import\FormDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

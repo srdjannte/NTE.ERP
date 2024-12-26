@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <BaseOutputPath>..\..\bin\</BaseOutputPath>
+    <Product>NTE ERP</Product>
+    <Description>NTE ERP Soluton</Description>
+    <Copyright>NTE</Copyright>
+    <PackageProjectUrl>http://www.nte.rs/erp/</PackageProjectUrl>
+    <StartupObject>nte.erp.client.Program</StartupObject>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <Title>NTE ERP</Title>
+    <Authors>NTE doo</Authors>
+    <Company>NTE doo</Company>
+    <ApplicationIcon>index.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Forms\ControlGrid.cs" />
+    <Compile Remove="Forms\ControlGrid.Designer.cs" />
+    <Compile Remove="Forms\FormList.cs" />
+    <Compile Remove="Forms\FormList.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Forms\ControlGrid.resx" />
+    <EmbeddedResource Remove="Forms\FormList.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="index.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\nte.erp.core\nte.erp.core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Invoices\Export\ControlExportValidation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Invoices\ControlImportGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Invoices\Editor\FormEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Invoices\Editor\FormEditorExportSourceMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Invoices\Editor\FormEditorSendManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Invoices\Editor\FormEditorSourceManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Invoices\Editor\FormEditorSourceTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Invoices\Editor\FormEditorTransformRefresh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Statements\ControlList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documents\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

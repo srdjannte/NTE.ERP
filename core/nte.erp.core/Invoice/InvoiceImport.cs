@@ -1,11 +1,22 @@
-﻿namespace nte.erp.core.Invoice
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Xml.Serialization;
+
+namespace nte.erp.core.Invoice
 {
-  public class InvoiceImport : InvoiceBase
+  [Serializable]
+  [XmlRoot("InvoiceImport")]
+  [Table("InvoiceImport")]
+  public partial class InvoiceImport : InvoiceBase
   {
     public InvoiceImport()
     {
     }
-
+    //[Key]
+    //public int Id { get; set; }
+    public int MyId { get; set; }
+    [StringLength(128)]
+    public string InvoiceId { get; set; }
     /*[ForeignKey(nameof(AccountingCustomerPartyId))]
     [InverseProperty(nameof(Party.InvoiceAccountingCustomerParties))]
     public virtual Party AccountingCustomerParty;
